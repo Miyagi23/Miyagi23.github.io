@@ -28,6 +28,42 @@
       transition: 0.2s;
     }
 
+    /* LANGUAGE SWITCHER STYLES */
+    .language-switcher {
+      text-align: right;
+      padding: 0 0 15px 0;
+      font-size: 0.95rem;
+      border-bottom: 2px solid #e9edf4;
+      margin-bottom: 1.5rem;
+    }
+
+    .language-switcher a {
+      color: #1d4b7c;
+      text-decoration: none;
+      padding: 4px 12px;
+      border-radius: 20px;
+      transition: 0.2s;
+      font-weight: 500;
+    }
+
+    .language-switcher a:hover {
+      background: #eef2f7;
+      text-decoration: none;
+    }
+
+    .language-switcher .active {
+      font-weight: 600;
+      color: #0b1a2b;
+      background: #eef2f7;
+      padding: 4px 12px;
+      border-radius: 20px;
+    }
+
+    .language-switcher .divider {
+      color: #c0cbd8;
+      margin: 0 4px;
+    }
+
     h1 {
       font-size: 2.4rem;
       font-weight: 600;
@@ -262,6 +298,55 @@
       padding-top: 1.2rem;
     }
 
+    /* Quick actions box */
+    .quick-actions {
+      margin-top: 2.8rem;
+      background: #eef4fc;
+      border-radius: 24px;
+      padding: 1.8rem 2rem;
+    }
+
+    .quick-actions-inner {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      align-items: center;
+      gap: 1rem;
+    }
+
+    .quick-actions-title {
+      font-weight: 600;
+      font-size: 1.1rem;
+      color: #0a2a4a;
+    }
+
+    .quick-actions-tags {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.8rem 1.8rem;
+      margin-top: 0.4rem;
+    }
+
+    .quick-actions-tag {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.3rem;
+      background: #eef3fa;
+      padding: 0.15rem 0.9rem 0.15rem 0.9rem;
+      border-radius: 40px;
+      font-size: 0.8rem;
+      color: #2b4b6e;
+      font-weight: 500;
+    }
+
+    .quick-actions-note {
+      font-size: 0.9rem;
+      color: #1f4770;
+      background: white;
+      padding: 0.2rem 1.4rem;
+      border-radius: 60px;
+    }
+
     @media (max-width: 760px) {
       body { padding: 1rem 0.8rem; }
       .container { padding: 1.5rem 1.2rem; }
@@ -270,6 +355,8 @@
       .faq-card { padding: 1.2rem; }
       .two-col-grid { grid-template-columns: 1fr; }
       .image-grid .image-container { flex: 1 1 100%; max-width: 100%; }
+      .quick-actions-inner { flex-direction: column; align-items: flex-start; }
+      .quick-actions-note { width: 100%; text-align: center; padding: 0.5rem; }
     }
 
     .anchor {
@@ -279,6 +366,13 @@
 </head>
 <body>
 <div class="container">
+
+  <!-- ===== LANGUAGE SWITCHER ===== -->
+  <div class="language-switcher">
+    <a href="../index.html">🇺🇸 English</a>
+    <span class="divider">|</span>
+    <span class="active">🇪🇸 Español</span>
+  </div>
 
   <h1>
     📦 Preguntas Frecuentes de Cumplimiento
@@ -312,11 +406,11 @@
 
       <div class="image-grid">
         <div class="image-container">
-          <img src="Order-overage.png" alt="Pantalla de excedente de pedido 1">
+          <img src="../Order-overage.png" alt="Pantalla de excedente de pedido 1">
           <p class="image-caption">📸 Excedente de pedido — pantalla 1</p>
         </div>
         <div class="image-container">
-          <img src="Order-overage2.png" alt="Pantalla de excedente de pedido 2">
+          <img src="../Order-overage2.png" alt="Pantalla de excedente de pedido 2">
           <p class="image-caption">📸 Excedente de pedido — pantalla 2</p>
         </div>
       </div>
@@ -325,21 +419,21 @@
         <li><strong>Identificar producto extra:</strong> Al escanear, aparecerá un error de <strong>"artículo inválido"</strong>.</li>
       </ul>
       <div class="image-container">
-        <img src="error-invalid.png" alt="Pantalla de error de artículo inválido">
+        <img src="../error-invalid.png" alt="Pantalla de error de artículo inválido">
         <p class="image-caption">📸 Aparece el error "Artículo Inválido" al escanear</p>
       </div>
       <ul class="step-list">
         <li><strong>Continuar con el empaque:</strong> <strong>DEJA EL PRODUCTO EXTRA FUERA</strong> del empaque.</li>
       </ul>
       <div class="image-container">
-        <img src="extra-product.png" alt="Producto extra sobre superficie blanca">
+        <img src="../extra-product.png" alt="Producto extra sobre superficie blanca">
         <p class="image-caption">📸 Producto extra — dejarlo fuera del empaque</p>
       </div>
       <ul class="step-list">
         <li>Envía el pedido empaquetado como de costumbre, luego coloca el <strong>artículo extra en el tote</strong> y coloca el tote <strong>afuera</strong> de tu estación de empaque.</li>
       </ul>
       <div class="image-container">
-        <img src="tote-outside.png" alt="Tote fuera de la estación de empaque">
+        <img src="../tote-outside.png" alt="Tote fuera de la estación de empaque">
         <p class="image-caption">📸 Colocar el tote fuera de la estación de empaque</p>
       </div>
       <div class="note">
@@ -358,11 +452,11 @@
 
       <div class="image-grid">
         <div class="image-container">
-          <img src="Wrong-product3.png" alt="Pantalla de producto incorrecto 1">
+          <img src="../Wrong-product3.png" alt="Pantalla de producto incorrecto 1">
           <p class="image-caption">📸 Producto incorrecto — pantalla 1</p>
         </div>
         <div class="image-container">
-          <img src="Wrong-product4.png" alt="Pantalla de producto incorrecto 2">
+          <img src="../Wrong-product4.png" alt="Pantalla de producto incorrecto 2">
           <p class="image-caption">📸 Producto incorrecto — pantalla 2</p>
         </div>
       </div>
@@ -371,26 +465,26 @@
         <li><strong>Identificar artículo inválido:</strong> Aparece el error "Artículo Inválido".</li>
       </ul>
       <div class="image-container">
-        <img src="error-invalid.png" alt="Pantalla de error de artículo inválido">
+        <img src="../error-invalid.png" alt="Pantalla de error de artículo inválido">
         <p class="image-caption">📸 Aparece el error "Artículo Inválido" al escanear</p>
       </div>
       <ul class="step-list">
         <li><strong>Empacar el producto correcto:</strong> <strong>DEJA el artículo inválido FUERA</strong> del empaque.</li>
       </ul>
       <div class="image-container">
-        <img src="wrong-product.png" alt="Ejemplo de producto incorrecto">
+        <img src="../wrong-product.png" alt="Ejemplo de producto incorrecto">
         <p class="image-caption">📸 Producto incorrecto — dejarlo fuera del empaque</p>
       </div>
       <ul class="step-list">
         <li>Haz clic en los <strong>tres puntos</strong> (abajo a la izquierda) → haz clic en <strong>"reimprimir"</strong> para la etiqueta de contenido.</li>
       </ul>
       <div class="image-container">
-        <img src="reprint-btn.png" alt="Botón de reimprimir">
+        <img src="../reprint-btn.png" alt="Botón de reimprimir">
         <p class="image-caption">📸 Tres puntos → hacer clic en "reimprimir"</p>
       </div>
 
       <div class="image-container">
-        <img src="Wrong-product5.png" alt="Producto incorrecto paso 5">
+        <img src="../Wrong-product5.png" alt="Producto incorrecto paso 5">
         <p class="image-caption">📸 Producto incorrecto — paso 5</p>
       </div>
 
@@ -399,7 +493,7 @@
       </ul>
 
       <div class="image-container">
-        <img src="Wrong-product6.png" alt="Producto incorrecto paso 6">
+        <img src="../Wrong-product6.png" alt="Producto incorrecto paso 6">
         <p class="image-caption">📸 Producto incorrecto — paso 6</p>
       </div>
 
@@ -408,12 +502,12 @@
       </ul>
 
       <div class="image-container">
-        <img src="Wrong-product7.png" alt="Producto incorrecto paso 7">
+        <img src="../Wrong-product7.png" alt="Producto incorrecto paso 7">
         <p class="image-caption">📸 Producto incorrecto — paso 7</p>
       </div>
 
       <div class="image-container">
-        <img src="override-popup.png" alt="Ventana emergente de anulación">
+        <img src="../override-popup.png" alt="Ventana emergente de anulación">
         <p class="image-caption">📸 Haz clic en "anular" para continuar</p>
       </div>
       <div class="alert-box">
@@ -432,11 +526,11 @@
 
       <div class="image-grid">
         <div class="image-container">
-          <img src="Missing-product.png" alt="Pantalla de producto faltante 1">
+          <img src="../Missing-product.png" alt="Pantalla de producto faltante 1">
           <p class="image-caption">📸 Producto faltante — pantalla 1</p>
         </div>
         <div class="image-container">
-          <img src="Missing-product1.png" alt="Pantalla de producto faltante 2">
+          <img src="../Missing-product1.png" alt="Pantalla de producto faltante 2">
           <p class="image-caption">📸 Producto faltante — pantalla 2</p>
         </div>
       </div>
@@ -445,7 +539,7 @@
         <li><strong>Escanea todos los artículos</strong> para determinar qué productos faltan.</li>
       </ul>
       <div class="image-container">
-        <img src="missing-scan.png" alt="Pantalla de escaneo de producto faltante">
+        <img src="../missing-scan.png" alt="Pantalla de escaneo de producto faltante">
         <p class="image-caption">📸 Escanea todos los artículos para encontrar los productos faltantes</p>
       </div>
       <ul class="step-list">
@@ -453,7 +547,7 @@
       </ul>
 
       <div class="image-container">
-        <img src="Missing-product3.png" alt="Producto faltante paso 3">
+        <img src="../Missing-product3.png" alt="Producto faltante paso 3">
         <p class="image-caption">📸 Producto faltante — paso 3</p>
       </div>
 
@@ -461,12 +555,12 @@
         <li>Haz clic en los <strong>tres puntos</strong> (abajo a la izquierda) → haz clic en <strong>"reimprimir"</strong> para la etiqueta de contenido.</li>
       </ul>
       <div class="image-container">
-        <img src="reprint-btn.png" alt="Botón de reimprimir">
+        <img src="../reprint-btn.png" alt="Botón de reimprimir">
         <p class="image-caption">📸 Tres puntos → hacer clic en "reimprimir"</p>
       </div>
 
       <div class="image-container">
-        <img src="Missing-product7.png" alt="Producto faltante paso 7">
+        <img src="../Missing-product7.png" alt="Producto faltante paso 7">
         <p class="image-caption">📸 Producto faltante — paso 7</p>
       </div>
 
@@ -474,7 +568,7 @@
         <li>Coloca la <strong>etiqueta de contenido</strong> en la caja, colócala en el tote y luego coloca el tote <strong>afuera</strong> de la estación de empaque.</li>
       </ul>
       <div class="image-container">
-        <img src="content-label.png" alt="Etiqueta de contenido en la caja">
+        <img src="../content-label.png" alt="Etiqueta de contenido en la caja">
         <p class="image-caption">📸 Etiqueta de contenido colocada en la caja</p>
       </div>
       <ul class="step-list">
@@ -482,12 +576,12 @@
       </ul>
 
       <div class="image-container">
-        <img src="Missing-product8.png" alt="Producto faltante paso 8">
+        <img src="../Missing-product8.png" alt="Producto faltante paso 8">
         <p class="image-caption">📸 Producto faltante — paso 8</p>
       </div>
 
       <div class="image-container">
-        <img src="override-popup.png" alt="Ventana emergente de anulación">
+        <img src="../override-popup.png" alt="Ventana emergente de anulación">
         <p class="image-caption">📸 Haz clic en "anular" para continuar</p>
       </div>
       <div class="note">
@@ -507,14 +601,14 @@
         <li><strong>Verifica el SKU / descripción</strong> en la computadora para confirmar que coincide con el producto.</li>
       </ul>
       <div class="image-container">
-        <img src="error-invalid.png" alt="Pantalla de error de artículo inválido">
+        <img src="../error-invalid.png" alt="Pantalla de error de artículo inválido">
         <p class="image-caption">📸 Error "Artículo Inválido" — verificar SKU</p>
       </div>
       <ul class="step-list">
         <li>Si el artículo <strong>no es parte del pedido</strong> o es un <strong>extra</strong>, <strong>déjalo fuera</strong> del empaque y continúa empacando el resto.</li>
       </ul>
       <div class="image-container">
-        <img src="wrong-product.png" alt="Producto incorrecto">
+        <img src="../wrong-product.png" alt="Producto incorrecto">
         <p class="image-caption">📸 Dejar el artículo inválido fuera del empaque</p>
       </div>
       <ul class="step-list">
@@ -522,7 +616,7 @@
       </ul>
 
       <div class="image-container">
-        <img src="Wrong-product6.png" alt="Producto incorrecto paso 6">
+        <img src="../Wrong-product6.png" alt="Producto incorrecto paso 6">
         <p class="image-caption">📸 Producto incorrecto — paso 6</p>
       </div>
 
@@ -530,7 +624,7 @@
         <li><strong>Si tienes el resto</strong> del pedido: empaquétalo y envíalo por la cinta transportadora. Coloca el <strong>artículo extra</strong> en un tote y colócalo afuera.</li>
       </ul>
       <div class="image-container">
-        <img src="tote-outside.png" alt="Tote fuera de la estación de empaque">
+        <img src="../tote-outside.png" alt="Tote fuera de la estación de empaque">
         <p class="image-caption">📸 Colocar el tote fuera de la estación de empaque</p>
       </div>
     </div>
@@ -547,14 +641,14 @@
         <li>Haz clic en los <strong>tres puntos</strong> (abajo a la izquierda) → haz clic en <strong>"reimprimir"</strong> para la etiqueta de contenido.</li>
       </ul>
       <div class="image-container">
-        <img src="reprint-btn.png" alt="Botón de reimprimir">
+        <img src="../reprint-btn.png" alt="Botón de reimprimir">
         <p class="image-caption">📸 Tres puntos → hacer clic en "reimprimir"</p>
       </div>
       <ul class="step-list">
         <li>Coloca la etiqueta de contenido en la caja, colócala en el tote y luego coloca el tote <strong>afuera</strong> de la estación de empaque.</li>
       </ul>
       <div class="image-container">
-        <img src="content-label.png" alt="Etiqueta de contenido">
+        <img src="../content-label.png" alt="Etiqueta de contenido">
         <p class="image-caption">📸 Etiqueta de contenido aplicada</p>
       </div>
     </div>
@@ -572,9 +666,8 @@
         <li>Haz clic en los <strong>tres puntos</strong> (lado izquierdo) → haz clic en <strong>"reiniciar"</strong>.</li>
       </ul>
 
-      <!-- point-screen.png se mantiene aquí -->
       <div class="image-container">
-        <img src="point-screen.png" alt="Persona señalando la pantalla">
+        <img src="../point-screen.png" alt="Persona señalando la pantalla">
         <p class="image-caption">📸 Haz clic en tres puntos → reiniciar</p>
       </div>
 
@@ -582,9 +675,8 @@
         <li>Cuando aparezca la pregunta <em>"¿Deseas dejar el empaque 'TAL CUAL' y escanear otro tote?"</em> → haz clic en <strong>"anular"</strong>.</li>
       </ul>
 
-      <!-- touch-screen.png se movió aquí -->
       <div class="image-container">
-        <img src="touch-screen.png" alt="Persona tocando la pantalla">
+        <img src="../touch-screen.png" alt="Persona tocando la pantalla">
         <p class="image-caption">📸 Haz clic en "anular"</p>
       </div>
 
@@ -606,9 +698,8 @@
         <li>En su lugar, haz clic en los <strong>tres puntos</strong> (lado izquierdo) → haz clic en <strong>"reiniciar"</strong>.</li>
       </ul>
 
-      <!-- point-screen.png se mantiene aquí -->
       <div class="image-container">
-        <img src="point-screen.png" alt="Persona señalando la pantalla">
+        <img src="../point-screen.png" alt="Persona señalando la pantalla">
         <p class="image-caption">📸 Haz clic en tres puntos → reiniciar</p>
       </div>
 
@@ -616,9 +707,8 @@
         <li>Cuando aparezca la pregunta <em>"¿Deseas dejar el empaque 'TAL CUAL' y escanear otro tote?"</em> → haz clic en <strong>"anular"</strong>.</li>
       </ul>
 
-      <!-- touch-screen.png se movió aquí -->
       <div class="image-container">
-        <img src="touch-screen.png" alt="Persona tocando la pantalla">
+        <img src="../touch-screen.png" alt="Persona tocando la pantalla">
         <p class="image-caption">📸 Haz clic en "anular"</p>
       </div>
 
@@ -640,9 +730,8 @@
         <li>Haz clic en los <strong>tres puntos</strong> (lado izquierdo) → haz clic en <strong>"reiniciar"</strong>.</li>
       </ul>
 
-      <!-- point-screen.png se mantiene aquí -->
       <div class="image-container">
-        <img src="point-screen.png" alt="Persona señalando la pantalla">
+        <img src="../point-screen.png" alt="Persona señalando la pantalla">
         <p class="image-caption">📸 Haz clic en tres puntos → reiniciar</p>
       </div>
 
@@ -650,26 +739,25 @@
         <li>Cuando aparezca la pregunta <em>"¿Deseas dejar el empaque 'TAL CUAL' y escanear otro tote?"</em> → haz clic en <strong>"anular"</strong>.</li>
       </ul>
 
-      <!-- touch-screen.png se movió aquí -->
       <div class="image-container">
-        <img src="touch-screen.png" alt="Persona tocando la pantalla">
+        <img src="../touch-screen.png" alt="Persona tocando la pantalla">
         <p class="image-caption">📸 Haz clic en "anular"</p>
       </div>
     </div>
   </div>
 
   <!-- EXTRA: referencia rápida -->
-  <div style="margin-top: 2.8rem; background: #eef4fc; border-radius: 24px; padding: 1.8rem 2rem;">
-    <div style="display: flex; flex-wrap: wrap; justify-content: space-between; align-items: center; gap: 1rem;">
+  <div class="quick-actions">
+    <div class="quick-actions-inner">
       <div>
-        <span style="font-weight: 600; font-size: 1.1rem; color: #0a2a4a;">⚡ Acciones rápidas</span>
-        <div style="display: flex; flex-wrap: wrap; gap: 0.8rem 1.8rem; margin-top: 0.4rem;">
-          <span><span class="inline-img-placeholder">⋮</span> tres puntos → reimprimir</span>
-          <span><span class="inline-img-placeholder">↻</span> reiniciar → anular</span>
-          <span><span class="inline-img-placeholder">🟢</span> luz verde = entrenador</span>
+        <div class="quick-actions-title">⚡ Acciones rápidas</div>
+        <div class="quick-actions-tags">
+          <span class="quick-actions-tag">⋮ tres puntos → reimprimir</span>
+          <span class="quick-actions-tag">↻ reiniciar → anular</span>
+          <span class="quick-actions-tag">🟢 luz verde = entrenador</span>
         </div>
       </div>
-      <div style="font-size: 0.9rem; color: #1f4770; background: white; padding: 0.2rem 1.4rem; border-radius: 60px;">
+      <div class="quick-actions-note">
         siempre dejar los artículos extra fuera de la estación de empaque
       </div>
     </div>

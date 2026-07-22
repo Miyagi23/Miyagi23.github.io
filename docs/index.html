@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Fulfillment FAQs · Packout Reference</title>
+  <title>Fulfillment FAQs - Packout Reference</title>
   <style>
     * {
       margin: 0;
@@ -26,6 +26,42 @@
       box-shadow: 0 20px 40px -12px rgba(0, 20, 40, 0.25);
       padding: 2.5rem 2.8rem;
       transition: 0.2s;
+    }
+
+    /* LANGUAGE SWITCHER STYLES */
+    .language-switcher {
+      text-align: right;
+      padding: 0 0 15px 0;
+      font-size: 0.95rem;
+      border-bottom: 2px solid #e9edf4;
+      margin-bottom: 1.5rem;
+    }
+
+    .language-switcher a {
+      color: #1d4b7c;
+      text-decoration: none;
+      padding: 4px 12px;
+      border-radius: 20px;
+      transition: 0.2s;
+      font-weight: 500;
+    }
+
+    .language-switcher a:hover {
+      background: #eef2f7;
+      text-decoration: none;
+    }
+
+    .language-switcher .active {
+      font-weight: 600;
+      color: #0b1a2b;
+      background: #eef2f7;
+      padding: 4px 12px;
+      border-radius: 20px;
+    }
+
+    .language-switcher .divider {
+      color: #c0cbd8;
+      margin: 0 4px;
     }
 
     h1 {
@@ -262,6 +298,55 @@
       padding-top: 1.2rem;
     }
 
+    /* Quick actions box */
+    .quick-actions {
+      margin-top: 2.8rem;
+      background: #eef4fc;
+      border-radius: 24px;
+      padding: 1.8rem 2rem;
+    }
+
+    .quick-actions-inner {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      align-items: center;
+      gap: 1rem;
+    }
+
+    .quick-actions-title {
+      font-weight: 600;
+      font-size: 1.1rem;
+      color: #0a2a4a;
+    }
+
+    .quick-actions-tags {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.8rem 1.8rem;
+      margin-top: 0.4rem;
+    }
+
+    .quick-actions-tag {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.3rem;
+      background: #eef3fa;
+      padding: 0.15rem 0.9rem 0.15rem 0.9rem;
+      border-radius: 40px;
+      font-size: 0.8rem;
+      color: #2b4b6e;
+      font-weight: 500;
+    }
+
+    .quick-actions-note {
+      font-size: 0.9rem;
+      color: #1f4770;
+      background: white;
+      padding: 0.2rem 1.4rem;
+      border-radius: 60px;
+    }
+
     @media (max-width: 760px) {
       body { padding: 1rem 0.8rem; }
       .container { padding: 1.5rem 1.2rem; }
@@ -270,6 +355,8 @@
       .faq-card { padding: 1.2rem; }
       .two-col-grid { grid-template-columns: 1fr; }
       .image-grid .image-container { flex: 1 1 100%; max-width: 100%; }
+      .quick-actions-inner { flex-direction: column; align-items: flex-start; }
+      .quick-actions-note { width: 100%; text-align: center; padding: 0.5rem; }
     }
 
     .anchor {
@@ -279,6 +366,13 @@
 </head>
 <body>
 <div class="container">
+
+  <!-- ===== LANGUAGE SWITCHER ===== -->
+  <div class="language-switcher">
+    <span class="active">🇺🇸 English</span>
+    <span class="divider">|</span>
+    <a href="es/index.html">🇪🇸 Español</a>
+  </div>
 
   <h1>
     📦 Fulfillment FAQs
@@ -572,7 +666,6 @@
         <li>Click the <strong>three dots</strong> (left side) → click <strong>"reset"</strong>.</li>
       </ul>
 
-      <!-- point-screen.png stays here -->
       <div class="image-container">
         <img src="point-screen.png" alt="Person pointing at screen">
         <p class="image-caption">📸 Click three dots → reset</p>
@@ -582,7 +675,6 @@
         <li>When prompted <em>"Do you want to leave packing 'AS IS' and scan another tote?"</em> → click <strong>"override"</strong>.</li>
       </ul>
 
-      <!-- touch-screen.png moved here -->
       <div class="image-container">
         <img src="touch-screen.png" alt="Person touching screen">
         <p class="image-caption">📸 Click "override"</p>
@@ -606,7 +698,6 @@
         <li>Instead, click the <strong>three dots</strong> (left side) → click <strong>"reset"</strong>.</li>
       </ul>
 
-      <!-- point-screen.png stays here -->
       <div class="image-container">
         <img src="point-screen.png" alt="Person pointing at screen">
         <p class="image-caption">📸 Click three dots → reset</p>
@@ -616,7 +707,6 @@
         <li>When prompted <em>"Do you want to leave packing 'AS IS' and scan another tote?"</em> → click <strong>"override"</strong>.</li>
       </ul>
 
-      <!-- touch-screen.png moved here -->
       <div class="image-container">
         <img src="touch-screen.png" alt="Person touching screen">
         <p class="image-caption">📸 Click "override"</p>
@@ -640,7 +730,6 @@
         <li>Click the <strong>three dots</strong> (left side) → click <strong>"reset"</strong>.</li>
       </ul>
 
-      <!-- point-screen.png stays here -->
       <div class="image-container">
         <img src="point-screen.png" alt="Person pointing at screen">
         <p class="image-caption">📸 Click three dots → reset</p>
@@ -650,7 +739,6 @@
         <li>When prompted <em>"Do you want to leave packing 'AS IS' and scan another tote?"</em> → click <strong>"override"</strong>.</li>
       </ul>
 
-      <!-- touch-screen.png moved here -->
       <div class="image-container">
         <img src="touch-screen.png" alt="Person touching screen">
         <p class="image-caption">📸 Click "override"</p>
@@ -659,17 +747,17 @@
   </div>
 
   <!-- EXTRA: quick reference -->
-  <div style="margin-top: 2.8rem; background: #eef4fc; border-radius: 24px; padding: 1.8rem 2rem;">
-    <div style="display: flex; flex-wrap: wrap; justify-content: space-between; align-items: center; gap: 1rem;">
+  <div class="quick-actions">
+    <div class="quick-actions-inner">
       <div>
-        <span style="font-weight: 600; font-size: 1.1rem; color: #0a2a4a;">⚡ Quick actions</span>
-        <div style="display: flex; flex-wrap: wrap; gap: 0.8rem 1.8rem; margin-top: 0.4rem;">
-          <span><span class="inline-img-placeholder">⋮</span> three dots → reprint</span>
-          <span><span class="inline-img-placeholder">↻</span> reset → override</span>
-          <span><span class="inline-img-placeholder">🟢</span> green light = trainer</span>
+        <div class="quick-actions-title">⚡ Quick actions</div>
+        <div class="quick-actions-tags">
+          <span class="quick-actions-tag">⋮ three dots → reprint</span>
+          <span class="quick-actions-tag">↻ reset → override</span>
+          <span class="quick-actions-tag">🟢 green light = trainer</span>
         </div>
       </div>
-      <div style="font-size: 0.9rem; color: #1f4770; background: white; padding: 0.2rem 1.4rem; border-radius: 60px;">
+      <div class="quick-actions-note">
         always leave extra items outside pack station
       </div>
     </div>
